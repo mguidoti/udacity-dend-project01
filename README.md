@@ -1,4 +1,4 @@
-<div style="text-align: center; font-weight: bold; font-size: 18px; color: aqua;  padding-top: 10px;padding-bottom: 20px;"><span>Udacity Data Engineer Nanodegree</span></div>
+<p align="center"><a href="https://www.udacity.com/course/data-engineer-nanodegree--nd027">Udacity Data Engineer Nanodegree</a></p>
 
 # Project 01: Data Modeling with Postgres
 
@@ -12,8 +12,18 @@ This is a subset of real data from the [Million Song Dataset](https://labrosa.ee
 
 Example:
 ```json
-{"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}
-
+{ 
+  "num_songs": 1, 
+  "artist_id": "ARJIE2Y1187B994AB7", 
+  "artist_latitude": null, 
+  "artist_longitude": null, 
+  "artist_location": "", 
+  "artist_name": "Line Renaud", 
+  "song_id": "SOUPIRU12A6D4FA1E1", 
+  "title": "Der Kleine Dompfaff", 
+  "duration": 152.92036, 
+  "year": 0
+ }
 ```
 
 ### Log Dataset
