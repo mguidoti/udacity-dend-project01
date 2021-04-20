@@ -8,6 +8,14 @@ from datetime import datetime as dt
 
 
 def process_song_file(cur, filepath):
+    """Reads a JSON file from the song_data folder and selects the right data
+     to go into both Songs and Artists tables.
+
+    Args:
+        cur (Psycopg2.Cursor): Cursor to execute SQL queries
+        filepath (str): Filepath to the data file to be loaded
+    """
+
     # open song file
     df = pd.read_json(filepath, typ='series')
 
@@ -29,6 +37,15 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+    """Reads a JSON file from the log_data folder and selects the right data
+     to go into both Time, Users and Songplys tables, transforming data when
+     needed.
+
+    Args:
+        cur (Psycopg2.Cursor): Cursor to execute SQL queries
+        filepath (str): Filepath to the data file to be loaded
+    """
+
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -95,6 +112,16 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    """[summary]
+
+    Args:
+        cur (Psycopg2.Cursor): Cursor to execute SQL queries
+        conn (Psycopg2.Connection): Connection object to the SQL database
+        filepath (str): Filepath to the folder containing the data files
+             to be loaded
+        func (function): Function to be called
+    """
+
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
